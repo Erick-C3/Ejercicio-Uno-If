@@ -10,15 +10,35 @@
     info ?
 
 */
+const inputUsuario = document.querySelector("#usuario-nombre");
+const inputContrasenia = document.querySelector("#usuario-contrasenia");
+const pResultado = document.querySelector("#resultado");
 
 const USUARIO_NOMBRE_REGISTRADO = "Carlos";
 const USUARIO_CONTRASENIA_REGISTRADA = "Carlos1.";
 
-let usuarioNombreIngresado = prompt("Ingrese usuario");
-let usuarioContraseniaIngresada = prompt("Ingresar contraseña");
+const USUARIO_NOMBRE_REGISTRADO_2 = "Jose";
+const USUARIO_CONTRASENIA_REGISTRADA_2 ="123";
 
-if ( ( usuarioContraseniaIngresada == USUARIO_CONTRASENIA_REGISTRADA)  && (usuarioNombreIngresado == USUARIO_NOMBRE_REGISTRADO)) {
-    document.write("Usuario y contraseña correctos");
-} else {
-    document.write("Usuario y contraseña incorrectos");
+/* let usuarioNombreIngresado = prompt("Ingrese usuario");
+let usuarioContraseniaIngresada = prompt("Ingresar contraseña");
+ */
+
+let usuarioNombreIngresado = "def nombre";
+let usuarioContraseniaIngresada = "def contrasenia";
+
+function verificar(){
+    usuarioNombreIngresado = inputUsuario.value;
+    usuarioContraseniaIngresada = inputContrasenia.value;   
+    if ( ( usuarioContraseniaIngresada == USUARIO_CONTRASENIA_REGISTRADA)  && (usuarioNombreIngresado == USUARIO_NOMBRE_REGISTRADO)) {
+        /* document.write("Usuario y contraseña correctos"); */
+        pResultado.innerHTML = "Usuario y contraseña correctos "+usuarioNombreIngresado;
+    } else if(( usuarioContraseniaIngresada == USUARIO_CONTRASENIA_REGISTRADA_2)  && (usuarioNombreIngresado == USUARIO_NOMBRE_REGISTRADO_2)){
+        pResultado.innerHTML = "Usuario y contraseña correctos "+usuarioNombreIngresado;
+    }else {
+        pResultado.innerHTML = "Usuario y contraseña incorrectos";
+        pResultado.style.color = "red";
+        /* document.write("Usuario y contraseña incorrectos"); */
+    }
 }
+
