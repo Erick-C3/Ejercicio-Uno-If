@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     
-    <label for="usuario-nombre">Ingrese usuario:</label>
-    <input id="usuario-nombre" type="text">
-    <label for="usuario-contrasenia">Ingrese contraseña:</label>
-    <input id="usuario-contrasenia" type="text">
-    <button onclick="verificar()">Ingresar</button>
+    <div id="contenedor-ingreso">
+        <label class="separacion" for="usuario-nombre">Ingrese usuario:</label>
+        <input class="separacion" id="usuario-nombre" type="text">
+        <label class="separacion" for="usuario-contrasenia">Ingrese contraseña:</label>
+        <input class="separacion" id="usuario-contrasenia" type="password">
+        <button class="separacion" onclick="verificar()">Ingresar</button>
+    </div>
 
     <p id="resultado"></p>
 

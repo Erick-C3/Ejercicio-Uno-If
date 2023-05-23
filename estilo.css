@@ -1,0 +1,38 @@
+body{
+    display: grid;
+    place-content: center;
+    background-color: #0d1117;
+    color:#e6edf3;
+}
+
+#contenedor-ingreso{
+    display: grid;
+    place-content: center;
+    background-color: #161b22;
+    border: 1px solid gray;
+    border-radius: 7px;
+    padding: 13px;
+}
+
+input{
+    border-radius: 7px;
+    background-color: #161b22;
+    color: #e6edf3;
+    height: 13px;
+    font-size: 10px;
+}
+
+button{
+    background-color: #238636;
+    color:whitesmoke;
+    padding: 4px 0px 4px 0px;
+    font-size: 10px;
+    font-weight: bold;
+
+    border-radius: 7px;
+}
+
+
+.separacion{
+    margin: 5px 0px 5px 0px;
+}
