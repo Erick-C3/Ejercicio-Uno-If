@@ -20,8 +20,10 @@ const USUARIO_CONTRASENIA_REGISTRADA = "Carlos1.";
 const USUARIO_NOMBRE_REGISTRADO_2 = "Jose";
 const USUARIO_CONTRASENIA_REGISTRADA_2 ="123"; */
 
-const usuarioNombRegist = ["Carlos", "Jose"];
-const usuarioContraRegist = ["Carlos1.", "123"];
+const usuarioNombRegist = ["Carlos", "Jose", "Pepita"];
+const usuarioContraRegist = ["Carlos1.", "123", "abc"];
+const USUARIO_NO_VERIFICADO = false;
+const USUARIO_VERIFICADO = true;
 
 /* let usuarioNombreIngresado = prompt("Ingrese usuario");
 let usuarioContraseniaIngresada = prompt("Ingresar contraseña");
@@ -30,20 +32,39 @@ let usuarioContraseniaIngresada = prompt("Ingresar contraseña");
 let usuarioNombreIngresado = "def nombre";
 let usuarioContraseniaIngresada = "def contrasenia";
 
+
 function verificar(){
+    let estadoVerificacion = USUARIO_NO_VERIFICADO;
     usuarioNombreIngresado = inputUsuario.value;
     usuarioContraseniaIngresada = inputContrasenia.value;   
-    if ( ( usuarioContraseniaIngresada == usuarioContraRegist[0])  && (usuarioNombreIngresado == usuarioNombRegist[0])) {
+
+    for (let i = 0; i < usuarioNombRegist.length; i++) {
+        if ( ( usuarioContraseniaIngresada == usuarioContraRegist[i])  && (usuarioNombreIngresado == usuarioNombRegist[i])) {
+            estadoVerificacion = USUARIO_VERIFICADO;
+            i = usuarioNombRegist.length;
+        }
+    }
+
+    //sacamos los mensajes acá para evitar que el else se use innecesariamente
+    if (estadoVerificacion) {
         pResultado.style.color = "green";
-        /* document.write("Usuario y contraseña correctos"); */
+        pResultado.innerHTML = "Usuario y contraseña correctos "+usuarioNombreIngresado;
+    }else{
+        pResultado.innerHTML = "Usuario y contraseña incorrectos";
+        pResultado.style.color = "red";
+    }
+    /* if ( ( usuarioContraseniaIngresada == usuarioContraRegist[0])  && (usuarioNombreIngresado == usuarioNombRegist[0])) {
+        pResultado.style.color = "green";
         pResultado.innerHTML = "Usuario y contraseña correctos "+usuarioNombreIngresado;
     } else if(( usuarioContraseniaIngresada == usuarioContraRegist[1])  && (usuarioNombreIngresado == usuarioNombRegist[1])){
+        pResultado.style.color = "green";
+        pResultado.innerHTML = "Usuario y contraseña correctos "+usuarioNombreIngresado;
+    }else if(( usuarioContraseniaIngresada == usuarioContraRegist[2])  && (usuarioNombreIngresado == usuarioNombRegist[2])){
         pResultado.style.color = "green";
         pResultado.innerHTML = "Usuario y contraseña correctos "+usuarioNombreIngresado;
     }else {
         pResultado.innerHTML = "Usuario y contraseña incorrectos";
         pResultado.style.color = "red";
-        /* document.write("Usuario y contraseña incorrectos"); */
-    }
+    } */
 }
 
